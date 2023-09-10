@@ -1,10 +1,10 @@
 package plugin
 
-import exception.{EmptyTextException, InvalidCharactersLimit, WordLengthGreaterThanLimit}
+import exception.{EmptyTextException, InvalidCharactersLimit, SplitException, WordLengthGreaterThanLimit}
 
 object Splitter {
 
-  def split(text: String, perLine: Int): Either[Exception, String] = for {
+  def split(text: String, perLine: Int): Either[SplitException, String] = for {
     _      <- Either.cond(text.nonEmpty, (), EmptyTextException())
     _      <- Either.cond(perLine > 0, (), InvalidCharactersLimit())
     words  <- Right(text.split(' '))

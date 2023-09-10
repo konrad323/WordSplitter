@@ -1,3 +1,3 @@
 package exception
 
-case class EmptyTextException() extends Exception
+case class EmptyTextException() extends SplitException

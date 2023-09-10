@@ -1,3 +1,3 @@
 package exception
 
-case class WordLengthGreaterThanLimit() extends Exception
+case class WordLengthGreaterThanLimit() extends SplitException

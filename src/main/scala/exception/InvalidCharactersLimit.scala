@@ -1,3 +1,3 @@
 package exception
 
-case class InvalidCharactersLimit() extends Exception
+case class InvalidCharactersLimit() extends SplitException
